@@ -27,8 +27,8 @@ DAEMON_OPTS="-a <%= node['varnish']['listen_address'] %>:<%= node['varnish']['li
               -u <%= node['varnish']['user'] %> -g <%= node['varnish']['group'] %> \
               -t <%= node['varnish']['ttl'] %> \
               -p thread_pool_add_delay=2 \
-              -p thread_pools=1 \
-              -p thread_pool_min=400\
+              -p thread_pools=<%= node['varnish']['thread_pools'] %> \
+              -p thread_pool_min=800\
               -p thread_pool_max=4000 \
               -w <%= node['varnish']['min_threads'] %>,<%= node['varnish']['max_threads'] %>,<%= node['varnish']['thread_timeout'] %> \
               -s <%= node['varnish']['storage'] %>,<%= (node['varnish']['storage']=='file')?"#{node['varnish']['storage_file']},":'' %><%= node['varnish']['storage_size'] %> \

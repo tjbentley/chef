@@ -39,3 +39,4 @@ default['varnish']['backend_host2_port'] = 80
 default['varnish']['backend_stale_grace_period'] = '6h'
 default['varnish']['probe_timeout'] = '60ms'
 default['varnish']['probe_url'] ='/'
+default['varnish']['thread_pools'] ='2'
