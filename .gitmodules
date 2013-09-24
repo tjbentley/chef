@@ -1,3 +1,6 @@
 [submodule "newrelic"]
 	path = newrelic
 	url = https://github.com/tjbentley/chef-newrelic.git
+[submodule "chef-newrelic"]
+	path = chef-newrelic
+	url = https://github.com/escapestudios/chef-newrelic.git
